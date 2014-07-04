@@ -1,0 +1,56 @@
+<html>
+    <head>
+
+        <style type="text/css">
+            div { 
+                background-color: #FF0000;
+                width: 200; 
+                height: 200; 
+                text-align: center;
+                border: 1px solid #00ff00;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="d1">hello</div>
+        <div id="d2">World</div>
+        <div id="d3">Javascript</div>
+        <div id="d4">Programming</div>
+        <div id="d5">Is Great</div>
+
+        <script type="text/javascript">
+            var divs = document.getElementsByTagName('div');
+            var did;
+
+            for (var i = 0; i < divs.length; i++) {
+                did = divs[i].id;
+
+                /**
+                 * Error with did 
+                 
+                 divs[i].onclick = function() {
+                 alert(did);
+                 };
+                 
+                 */
+                //solution with function outside 
+                //of loop
+
+                divs[i].onclick = clickhandler(did);
+
+            }
+
+
+
+            function clickhandler(did) {
+                return function() {
+                    alert(did);
+                };
+            }
+        </script>
+    </body>
+
+
+</html>
