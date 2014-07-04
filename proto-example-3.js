@@ -1,7 +1,3 @@
-/**
- * functional inheritance with 
- * shared secrets 
- */
 
 function gizmo(id, secret) {
     var secret = secret || {};
@@ -23,9 +19,8 @@ function hoozit(id) {
 }
 
 
-var h = new Hoozit(100);
+var h = new hoozit(100);
 console.log("type of = " + (typeof h));
-console.log("h.id = " + h.id);
-console.log("g tostring = " + h.toString());
-console.log("h true test =  " + h.test(100));
+ console.log("g tostring = " + h.toString());
+console.log("h true test = " + h.test(100));
 console.log("h false test = " + h.test(999));
