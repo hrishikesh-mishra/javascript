@@ -1,8 +1,12 @@
 /**
+ * The Y Combinator
+ * 
  * language didn't have 
  * 1. variable 
  * 2. assignment 
  * 3. named function 
+ * 
+ * 
  */
 
 
